@@ -16,6 +16,7 @@ namespace Lesson2
         #region Задание1
         static void Task1()
         {
+            //Найти минимальное из трех чисел
             FC.Input("Введите первое число", out int first);
             FC.Input("Введите второе число", out int second);
             FC.Input("Введите третье число", out int third);
@@ -29,6 +30,7 @@ namespace Lesson2
         #region Задание2
         static void Task2()
         {
+            //Посчитать количество цифр числа
             FC.Input("Введите число", out int x);
             int s = 0;
             if (x != 0)
@@ -48,6 +50,7 @@ namespace Lesson2
         #region Задание3
         static void Task3()
         {
+            //Сумма нечетных положительных чисел
             int x, s = 0;
             do
             {
@@ -61,6 +64,7 @@ namespace Lesson2
         #region Задание4
         static void Task4()
         {
+            //Логин пароль
             int x = 0;
             do
             {
@@ -86,6 +90,7 @@ namespace Lesson2
         #region Задание5
         static void Task5()
         {
+            //Индекс массы тела
             FC.Input("Введите рост в метрах", out double h);
             FC.Input("Введите вес", out double m);
             double I = m / (h * h);
@@ -107,6 +112,7 @@ namespace Lesson2
         #region Задание6
         static void Task6()
         {
+            //Подсчет чисел
             DateTime start = DateTime.Now;
             int s, x, good = 0;
 
@@ -129,6 +135,7 @@ namespace Lesson2
         #region Задание7
         static void Task7()
         {
+            //Рекурсия
             FC.Input("Введите a", out int a);
             FC.Input("Введите b", out int b);
             Console.Write(a);
