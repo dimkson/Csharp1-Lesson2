@@ -33,17 +33,12 @@ namespace Lesson2
             //Посчитать количество цифр числа
             FC.Input("Введите число", out int x);
             int s = 0;
-            if (x != 0)
+            do
             {
-                while (x != 0)
-                {
-                    x = x / 10;
-                    s++;
-                }
-                Console.WriteLine("Количество цифр: " + s);
-            }
-            else
-                Console.WriteLine("Неверный ввод!");
+                x /= 10;
+                s++;
+            } while (x != 0);
+            Console.WriteLine("Количество цифр: " + s);
             FC.Pause();
         }
         #endregion
