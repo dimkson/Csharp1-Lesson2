@@ -43,13 +43,37 @@ namespace MenuClass
         public static void Input(string str, out int num)
         {
             Console.WriteLine(str);
-            Int32.TryParse(Console.ReadLine(), out num);
+            bool b;
+            do
+            {
+                b = int.TryParse(Console.ReadLine(), out num);
+                if(!b) Console.WriteLine("Ошибка ввода данных, введите целое число!");
+            } while (!b);
         }
         public static void Input(string str, out double num)
         {
             Console.WriteLine(str);
-            double.TryParse(Console.ReadLine(), out num);
+            bool b;
+            do
+            {
+                b = double.TryParse(Console.ReadLine(), out num);
+                if (!b) Console.WriteLine("Ошибка ввода данных, введите вещественное число!");
+            } while (!b);
         }
+
+        //public static void Input<T>(string str, out T num) where T : struct
+        //{
+        //    Console.WriteLine(str);
+        //    try
+        //    {
+        //        num = (T)Convert.ChangeType(Console.ReadLine(), typeof(T));
+        //    }
+        //    catch
+        //    {
+        //        num = default;
+        //        Console.WriteLine("Некорректный ввод!");
+        //    }
+        //}
         public static string Input(string str)
         {
             Console.WriteLine(str);
